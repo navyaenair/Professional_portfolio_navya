@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400&display=swap" rel="stylesheet">
+  <style>
+    #animated-p {
+      white-space: nowrap;
+    }
+
+    #animated-h1 {
+       font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Top Navbar -->
+  <div class="navbar">
+    <img src="logo.jpg" alt="Logo" class="logo" />
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="nav-links">
+      <div class="close-icon" id="close-icon">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ✅ Landing Section -->
+  <div id="main">
+    <div class="left">
+      <div class="header-text">
+        <p id="animated-p" class="shimmer">Web Developer</p>
+        <h1 id="animated-h1"></h1>
+      </div>
+    </div>
+    <div class="right">
+      <img src="background.jpg" alt="Profile Image" />
+    </div>
+  </div>
+
+  <!-- ✅ About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="user.jpg" alt="" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title shimmer">About Me</h1>
+          <p class="sub-para">
+            I'm a passionate Full-Stack Python Developer with a B.Tech in Computer Science, driven by a love for
+            building modern, responsive websites and web applications. Skilled in both front-end and back-end
+            technologies, I transform ideas into user-friendly digital experiences with clean code, scalability, and
+            strong performance in mind. With a commitment to continuous learning, I thrive on tackling exciting
+            challenges and delivering impactful solutions in the ever-evolving world of web development.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">
+              Experience
+            </p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br />Web App Development</li>
+              <li><span>UI/UX</span><br />Designing Web Interfaces</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>2025/June-current</span><br />Web App Development Intern
+                at Bridgeon LLC
+              </li>
+              <li>
+                <span>2025/March-2025/June</span><br />Front-end Developer
+                Intern & Team Co-Lead at Bluestock Fintech
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022-2025</span><br />B.Tech in Computer Science</li>
+              <li>
+                <span>2019-2022</span><br />Diploma in Computer Engineering
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------SERVICES-------------- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title shimmer">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Designing</h2>
+          <p>
+            Web design is the process of creating the layout, look, and feel
+            of a website.
+          </p>
+          <a href="#">Learn More </a>
+        </div>
+        <div>
+          <i class="fa-solid fa-house"></i>
+          <h2>Web Development</h2>
+          <p>
+            Web development is the process of building and maintaining
+            websites or web applications.
+          </p>
+          <a href="#">Learn More </a>
+        </div>
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2>Database Managment</h2>
+          <p>
+            Database management involves organizing and maintaining data
+            efficiently using specialized software.
+          </p>
+          <a href="#">Learn More </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------portfolio------------------ -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title shimmer">My works</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="diabetes.jpeg" alt="" />
+          <div class="layer">
+            <h3>Diabetes diary</h3>
+            <p>
+              A web-based health diary enabling diabetic patients to track
+              their blood sugar levels, medications, and weight in real-time.
+            </p>
+            <a href="https://github.com/navyaenair/DIABETES-DIARY"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="eduverse.jpeg" alt="" />
+          <div class="layer">
+            <h3>EduVerse– Fostering Academic Excellence</h3>
+            <p>
+              An EdTech community platform offering job postings, mentorship
+              programs, and student fundraising support.
+            </p>
+            <a href="https://github.com/navyaenair/CsmpusBridge"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------contact--------------- -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title shimmer">Contact me</h1>
+          <p>
+            <i class="fa-solid fa-envelope"></i>navyarathnakaran123@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>+91-9061905831</p>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/navya-e-nair"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/navyaenair"><i class="fa-brands fa-github"></i></a>
+            <a href="https://leetcode.com/u/NAVYA_E/"><i class="fa-solid fa-code-branch"></i></a>
+            <a href="https://www.instagram.com/navya_e_nair"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing"
+            class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div id="local-time" class="tw-box-border" style="font-size: 2em; font-weight: bold; text-align: center">
+        <p class="tw-text-lg">Local Time (IST)</p>
+        <span id="time-display">--:--:--</span>
+      </div>
+
+      <p>
+        &copy; 2025 Navya E. Designed and developed by Navya E.All
+        rights reserved.
+      </p>
+    </div>
+  </div>
+
+  <!-- Tab functionality script -->
+  <script>
+    function opentab(tabName) {
+      const tabLinks = document.querySelectorAll(".tab-links");
+      const tabContents = document.querySelectorAll(".tab-contents");
+
+      tabLinks.forEach((link) => link.classList.remove("active-link"));
+      tabContents.forEach((tab) => tab.classList.remove("active-tab"));
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+  </script>
+
+  <!-- Typing effect script -->
+  <script>
+    window.addEventListener('load', function () {
+      const text = "Web Developer";
+      const element = document.getElementById("animated-p");
+      element.innerHTML = "";
+
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        } else {
+          setTimeout(eraseText, 2000);
+        }
+      }
+
+      function eraseText() {
+        if (element.innerHTML.length > 0) {
+          element.innerHTML = element.innerHTML.slice(0, -1);
+          setTimeout(eraseText, 50);
+        } else {
+          i = 0;
+          setTimeout(typeWriter, 500);
+        }
+      }
+
+      typeWriter();
+    });
+  </script>
+
+    <!-- Form submission script -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby_bYQeKulOgx7XJTwmhZPS3AtFLuSSkqJK6j4pw_0O_J6_VyB13vEFiAw-LbUvOKNq/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <!-- Time display script -->
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-IN', {
+          timeZone: 'Asia/Kolkata',
+          hour12: false
+        });
+        document.getElementById('time-display').textContent = timeString;
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+
+    <!-- Mobile menu script -->
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const closeIcon = document.getElementById('close-icon');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.add('active');
+      });
+
+      closeIcon.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    </script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

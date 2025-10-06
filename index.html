@@ -15,70 +15,72 @@
     }
 
     #animated-h1 {
-       font-family: "Times New Roman", Times, serif;
+      font-family: "Times New Roman", Times, serif;
     }
-            .resume-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-}
 
-.btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s ease;
-  text-align: center;
-  min-width: 140px;
-}
+    .resume-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      /* allows wrapping on small screens */
+    }
 
-.view-btn {
-  background: #28a745; /* green */
-  color: white;
-}
+    .btn8 {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      text-align: center;
+      min-width: 140px;
+    }
 
-.view-btn:hover {
-  background: #218838;
-}
+    .view-btn {
+      background: #28a745;
+      /* green */
+      color: white;
+    }
 
-.download-btn {
-  background: #007bff; /* blue */
-  color: white;
-}
+    .view-btn:hover {
+      background: #218838;
+    }
 
-.download-btn:hover {
-  background: #0056b3;
-}
+    .download-btn {
+      background: #007bff;
+      /* blue */
+      color: white;
+    }
 
-/* ✅ Media Queries for responsiveness */
-@media (max-width: 992px) {
-  #main {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .download-btn:hover {
+      background: #0056b3;
+    }
 
-  .resume-buttons {
-    justify-content: center;
-  }
-}
+    /* ✅ Media Queries for responsiveness */
+    @media (max-width: 992px) {
+      #main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-@media (max-width: 600px) {
-  .resume-buttons {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
+      .resume-buttons {
+        justify-content: center;
+      }
+    }
 
-  .btn {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
+    @media (max-width: 600px) {
+      .resume-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
 
-
+      .btn {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
   </style>
 </head>
 
@@ -118,23 +120,25 @@
     </div>
   </div> -->
   <div id="main">
-  <div class="left">
-    <div class="header-text">
-      <p id="animated-p" class="shimmer">Web Developer</p>
-      <h1 id="animated-h1"></h1>
+    <div class="left">
+      <div class="header-text">
+        <p id="animated-p" class="shimmer">Web Developer</p>
+        <h1 id="animated-h1"></h1>
 
-      <!-- Resume Buttons -->
-      <div class="resume-buttons">
-        <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" target="_blank" class="btn view-btn">View Resume</a>
-        <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" download class="btn download-btn">Download Resume</a>
+        <!-- Resume Buttons -->
+        <div class="resume-buttons">
+          <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" target="_blank"
+            class="btn8 view-btn">View Resume</a>
+          <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" download
+            class="btn8 download-btn">Download Resume</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="right">
-    <img src="background.jpg" alt="Profile Image" />
+    <div class="right">
+      <img src="background.jpg" alt="Profile Image" />
+    </div>
   </div>
-</div>
 
 
   <!-- ✅ About Section -->
@@ -355,57 +359,57 @@
     });
   </script>
 
-    <!-- Form submission script -->
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycby_bYQeKulOgx7XJTwmhZPS3AtFLuSSkqJK6j4pw_0O_J6_VyB13vEFiAw-LbUvOKNq/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
+  <!-- Form submission script -->
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycby_bYQeKulOgx7XJTwmhZPS3AtFLuSSkqJK6j4pw_0O_J6_VyB13vEFiAw-LbUvOKNq/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          msg.innerHTML = "Message sent successfully";
+          setTimeout(function () {
+            msg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
+
+  <!-- Time display script -->
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        hour12: false
       });
-    </script>
+      document.getElementById('time-display').textContent = timeString;
+    }
 
-    <!-- Time display script -->
-    <script>
-      function updateTime() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('en-IN', {
-          timeZone: 'Asia/Kolkata',
-          hour12: false
-        });
-        document.getElementById('time-display').textContent = timeString;
-      }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
 
-      updateTime();
-      setInterval(updateTime, 1000);
-    </script>
+  <!-- Mobile menu script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const closeIcon = document.getElementById('close-icon');
 
-    <!-- Mobile menu script -->
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      const closeIcon = document.getElementById('close-icon');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.add('active');
+    });
 
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.add('active');
-      });
+    closeIcon.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  </script>
 
-      closeIcon.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    </script>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 

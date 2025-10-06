@@ -162,10 +162,11 @@ body {
 }
 .right img {
   width: 100%;
-  max-width: 500px;
-  height: 100vh;
-  border-radius: 20px;
+  /* max-width: 500px; */
+  height: 100%;
+  /* border-radius: 20px; */
   object-fit: cover;
+  height: 100%;
 }
 
 #about {
@@ -631,9 +632,9 @@ form .btn2 {
     animation: fadeInUp 0.8s ease-in-out forwards;
   }
 
-  .right img {
+  /* .right img {
     animation: zoomIn 0.8s ease-in-out forwards;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -1151,12 +1152,7 @@ form .btn2 {
     padding: 10px;
   }
 }
-.right img {
-  border: double 7px #e6aba6;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
+
 
 
 

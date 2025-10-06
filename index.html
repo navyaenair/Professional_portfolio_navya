@@ -17,6 +17,68 @@
     #animated-h1 {
        font-family: "Times New Roman", Times, serif;
     }
+            .resume-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-align: center;
+  min-width: 140px;
+}
+
+.view-btn {
+  background: #28a745; /* green */
+  color: white;
+}
+
+.view-btn:hover {
+  background: #218838;
+}
+
+.download-btn {
+  background: #007bff; /* blue */
+  color: white;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
+
+/* ✅ Media Queries for responsiveness */
+@media (max-width: 992px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .resume-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
   </style>
 </head>
 
@@ -44,7 +106,7 @@
   </div>
 
   <!-- ✅ Landing Section -->
-  <div id="main">
+  <!-- <div id="main">
     <div class="left">
       <div class="header-text">
         <p id="animated-p" class="shimmer">Web Developer</p>
@@ -54,7 +116,26 @@
     <div class="right">
       <img src="background.jpg" alt="Profile Image" />
     </div>
+  </div> -->
+  <div id="main">
+  <div class="left">
+    <div class="header-text">
+      <p id="animated-p" class="shimmer">Web Developer</p>
+      <h1 id="animated-h1"></h1>
+
+      <!-- Resume Buttons -->
+      <div class="resume-buttons">
+        <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" target="_blank" class="btn view-btn">View Resume</a>
+        <a href="https://drive.google.com/file/d/1cbdRgVq4uf847iRlb-DDKlfyIwp2WAyN/view?usp=sharing" download class="btn download-btn">Download Resume</a>
+      </div>
+    </div>
   </div>
+
+  <div class="right">
+    <img src="background.jpg" alt="Profile Image" />
+  </div>
+</div>
+
 
   <!-- ✅ About Section -->
   <div id="about">
